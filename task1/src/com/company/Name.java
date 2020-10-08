@@ -3,17 +3,22 @@ package com.company;
 import java.awt.*;
 
 public class Name implements Drawable{
-    private int width;
-    private int height;
+    private double x, y;
+    private double w;
+    private double h;
 
-    public Name(int width, int height) {
-        this.width = width;
-        this.height = height;
+    public Name(double x, double y, double width, double height) {
+        this.x = x;
+        this.y = y;
+        this.w = width;
+        this.h = height;
     }
     @Override
     public void draw(Graphics2D gr, int width, int height) {
+        int tx = (int)((x - w / 2) *width);
+        int ty = (int)((y - h / 2) *height);
         gr.setColor(Color.ORANGE);
         gr.setFont(new Font("Arial", Font.BOLD, 35));
-        gr.drawString("Комсомолец", 220, 410);
+        gr.drawString("Комсомолец", tx, ty);
     }
 }

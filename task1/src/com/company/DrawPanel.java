@@ -16,11 +16,12 @@ public class DrawPanel extends JPanel {
     private int height = 800;
 
     public DrawPanel(){
-        this.body= new Body(width,height);
+        this.body= new Body(0.5, 0.63, 0.62, 0.38);
         this.windShield = new WindShield(width,height);
-        this.name= new Name(width,height);
-        this.tube = new Tube(width,height);
-        this.propeller = new Propeller(width,height);
+        this.name= new Name(0.32, 0.76, 0.1 ,0.1);
+        this.tube = new Tube(0.48, 0.39, 0.025, 0.1);
+        this.tube = new Tube(0.48, 0.30, 0.08, 0.05);
+        this.propeller = new Propeller();
         this.flashlight = new Flashlight(width,height);
         this.backGround = new BackGround(width,height);
         this.drawWindows = new DrawWindows(width,height);
